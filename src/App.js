@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import RepetitionExercise from './components/RepetitionExercise';
+import Durationexercise from './components/DurationExercise';
+import DistanceExercise from './components/DistanceExercise';
 
 function App() {
+  const [selectedExercise, setSelectedExercise] = useState(null);
+
+  const handleExerciseClick = (exerciseType) => {
+    setSelectedExercise(exerciseType);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Exercise Tracker</h1>
+      <button onClick={() => handleExerciseClick('repetition')}>Push-ups</button>
+      <br></br>
+      <button onClick={() => handleExerciseClick('duration')}>Running</button>
+      <br></br>
+
+
+      {selectedExercise === 'repetition' && <RepetitionExercise name="Push-ups" />}
+      {selectedExercise === 'duration' && <Durationexercise name="Running" />}
     </div>
   );
 }
+
 
 export default App;
