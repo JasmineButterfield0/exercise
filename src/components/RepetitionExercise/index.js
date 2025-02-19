@@ -16,7 +16,7 @@ const RepetitionExercise = ({ name }) => {
     <div>
       <h2>{name}</h2>
       <p>Repetitions: {repetitions}</p>
-      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleIncrement}>Complete Rep</button>
       <button onClick={handleReset}>Reset</button>
     </div>
   );
