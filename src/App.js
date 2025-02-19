@@ -13,17 +13,18 @@ function App() {
   return (
     <div className="App">
       <h1>Exercise Tracker</h1>
-      <button onClick={() => handleExerciseClick('repetition')}>Push-ups</button>
+      <button onClick={() => handleExerciseClick('repetition')}>Jumping Jacks</button>
       <br></br>
-      <button onClick={() => handleExerciseClick('duration')}>Running</button>
+      <button onClick={() => handleExerciseClick('duration')}>Cycling</button>
       <br></br>
 
 
-      {selectedExercise === 'repetition' && <RepetitionExercise name="Push-ups" />}
-      {selectedExercise === 'duration' && <Durationexercise name="Running" />}
+      {selectedExercise === 'repetition' && <RepetitionExercise name="Jumping Jacks" />}
+      {selectedExercise === 'duration' && <Durationexercise name="Cycling" />}
     </div>
   );
 }
 
 
 export default App;
+
